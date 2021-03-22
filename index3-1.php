@@ -12,6 +12,17 @@
 		</style>
 	</head>
 	<body>
+	<?php
+		if(isset($_POST['submit'])){
+		    $num=$_POST['num'];
+		    $den=$_POST['den'];
+		}
+		?>
+		<form action="index3-1.php" method="POST">
+			numerador: <input type="text" name="num" size="10" value="<?php echo $num;?>"/>
+			denominador: <input type="text" name="den" size="10" value="<?php echo $den;?>"/>
+			<input type="submit" value="CALCULAR" name="submit">
+		</form>
 		<?php
 		$num=2;
 		$den=2;
@@ -31,9 +42,7 @@
 		}
 		?>
 		<form action="index3-1.php" method="POST">
-			numerador: <input type="text" name="num" size="10" value="<?php echo $num;?>"/>
-			denominador: <input type="text" name="den" size="10" value="<?php echo $den;?>"/>
-			<input type="submit" value="CALCULAR" name="submit">
+			fraccion simplificada: <input type="text" name="num" size="10" value="<?php echo $num;?>"disabled/>  /  <input type="text" name="den" size="10" value="<?php echo $den;?>"disabled/>
 		</form>
 	</body>
 </html>
